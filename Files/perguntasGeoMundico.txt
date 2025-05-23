@@ -1,0 +1,700 @@
+Qual e o planeta onde vivemos?;
+Venus;
+Terra;
+Jupiter;
+Marte;
+Terra;
+|
+Qual e o maior oceano do planeta?;
+Oceano Atlantico;
+Oceano Pacifico;
+Oceano Indico;
+Oceano Glacial Artico;
+Oceano Pacifico;
+|
+Qual e o continente onde fica o Brasil?;
+Asia;
+Europa;
+Oceania;
+America do Sul;
+America do Sul;
+|
+Qual e a capital do Brasil?;
+Sao Paulo;
+Brasilia;
+Rio de Janeiro;
+Belo Horizonte;
+Brasilia;
+|
+Qual e o rio mais longo do mundo?;
+Amazonas;
+Nilo;
+Mississippi;
+Yangtze;
+Nilo;
+|
+Qual e o deserto mais quente do mundo?;
+Deserto do Atacama;
+Deserto do Saara;
+Deserto de Gobi;
+Deserto da Arabia;
+Deserto do Saara;
+|
+Qual e o menor continente em tamanho?;
+Africa;
+Europa;
+Oceania;
+Antartida;
+Oceania;
+|
+Em que continente esta localizado o Egito?;
+Asia;
+Europa;
+Africa;
+Oceania;
+Africa;
+|
+Qual e a capital da Argentina?;
+Rosario;
+Buenos Aires;
+Cordoba;
+Mendoza;
+Buenos Aires;
+|
+Qual e a capital da Franca?;
+Paris;
+Marselha;
+Lyon;
+Nice;
+Paris;
+|
+Em qual continente esta o deserto do Atacama?;
+Africa;
+Asia;
+America do Sul;
+Oceania;
+America do Sul;
+|
+Em qual pais esta localizado o Monte Everest?;
+India;
+China;
+Nepal;
+Butao;
+Nepal;
+|
+Qual e a capital da Australia?;
+Sydney;
+Melbourne;
+Canberra;
+Brisbane;
+Canberra;
+|
+Em que continente esta a Russia?;
+America do Norte;
+Asia;
+Africa;
+Europa;
+Asia;
+|
+Qual e a capital da Italia?;
+Roma;
+Milao;
+Veneza;
+Napoles;
+Roma;
+|
+Onde fica a Floresta Amazonica?;
+Brasil;
+Mexico;
+Colombia;
+Venezuela;
+Brasil;
+|
+Qual e o estado brasileiro mais populoso?;
+Bahia;
+Minas Gerais;
+Rio de Janeiro;
+Sao Paulo;
+Sao Paulo;
+|
+Qual e o clima predominante no deserto?;
+Tropical;
+Frio;
+Urbano;
+Arido;
+Arido;
+|
+Em que pais esta a Torre Eiffel?;
+Italia;
+Franca;
+Espanha;
+Alemanha;
+Franca;
+|
+Qual e o maior pais do mundo em area?;
+China;
+Brasil;
+Canada;
+Russia;
+Russia;
+|
+Qual e a capital do Canada?;
+Toronto;
+Ottawa;
+Vancouver;
+Montreal;
+Ottawa;
+|
+Qual oceano banha o litoral leste do Brasil?;
+Pacifico;
+Indico;
+Atlantico;
+Glacial Artico;
+Atlantico;
+|
+Qual e o pais mais populoso do mundo?;
+Estados Unidos;
+China;
+India;
+Indonesia;
+India;
+|
+Em que continente esta o Brasil?;
+Asia;
+America do Sul;
+Europa;
+Oceania;
+America do Sul;
+|
+Qual e o principal rio que corta o Brasil?;
+Parana;
+Amazonas;
+Sao Francisco;
+Tiete;
+Amazonas;
+|
+Qual estado brasileiro tem a maior floresta tropical?;
+Acre;
+Para;
+Amazonas;
+Rondonia;
+Amazonas;
+|
+Qual e a capital do estado de Minas Gerais?;
+Belo Horizonte;
+Uberlandia;
+Contagem;
+Montes Claros;
+Belo Horizonte;
+|
+Qual e a capital do estado do Rio de Janeiro?;
+Niteroi;
+Petropolis;
+Rio de Janeiro;
+Campos;
+Rio de Janeiro;
+|
+Qual e a capital do estado de Sao Paulo?;
+Campinas;
+Santos;
+Sao Paulo;
+Ribeirao Preto;
+Sao Paulo;
+|
+Qual e a capital do Mexico?;
+Monterrey;
+Cancun;
+Cidade do Mexico;
+Guadalajara;
+Cidade do Mexico;
+|
+Qual e o maior continente do mundo?;
+Asia;
+Africa;
+America;
+Europa;
+Asia;
+|
+Qual pais tem o formato parecido com uma bota?;
+Portugal;
+Italia;
+Grecia;
+Espanha;
+Italia;
+|
+Onde fica o Monte Fuji?;
+China;
+Japao;
+Coreia do Sul;
+Vietnam;
+Japao;
+|
+Qual e o unico continente banhado por tres oceanos?;
+Europa;
+Asia;
+America do Sul;
+Africa;
+Asia;
+|
+Qual oceano fica entre a Africa e a Australia?;
+Pacifico;
+Indico;
+Atlantico;
+Glacial Antartico;
+Indico;
+|
+Qual cidade e conhecida como Cidade Maravilhosa?;
+Brasilia;
+Salvador;
+Rio de Janeiro;
+Fortaleza;
+Rio de Janeiro;
+|
+Onde fica o Mar Morto?;
+Egito;
+Israel;
+Arabia Saudita;
+Ira;
+Israel;
+|
+Qual pais e conhecido por suas piramides antigas?;
+Grecia;
+Egito;
+Italia;
+Turquia;
+Egito;
+|
+Qual cidade brasileira e famosa pelo carnaval e o Cristo Redentor?;
+Salvador;
+Rio de Janeiro;
+Recife;
+Belem;
+Rio de Janeiro;
+|
+Em que continente esta a Antartida?;
+Asia;
+America do Sul;
+Oceania;
+Antartida;
+Antartida;
+|
+Qual e o maior arquipelago do mundo?;
+Filipinas;
+Indonesia;
+Maldivas;
+Havai;
+Indonesia;
+|
+Qual e a capital da Alemanha?;
+Berlim;
+Hamburgo;
+Colonia;
+Frankfurt;
+Berlim;
+|
+Onde esta localizado o deserto de Gobi?;
+India;
+Mongolia;
+China;
+Australia;
+Mongolia;
+|
+Qual pais e famoso pelos cangurus e coalas?;
+Nova Zelandia;
+Australia;
+Africa do Sul;
+Canada;
+Australia;
+|
+Onde nasce o rio Amazonas?;
+Brasil;
+Peru;
+Colombia;
+Venezuela;
+Peru;
+|
+Qual e o relevo predominante no Brasil?;
+Planaltos;
+Montanhas;
+Planicies;
+Cordilheiras;
+Planaltos;
+|
+Qual e o bioma predominante no sul do Brasil?;
+Caatinga;
+Mata Atlantica;
+Pampa;
+Cerrado;
+Pampa;
+|
+Qual e a capital da Bahia?;
+Salvador;
+Ilheus;
+Feira de Santana;
+Porto Seguro;
+Salvador;
+|
+Qual e o nome do ponto mais alto do Brasil?;
+Pico da Neblina;
+Pico das Agulhas Negras;
+Monte Roraima;
+Pico do Itatiaia;
+Pico da Neblina;
+|
+Onde esta localizado o Pantanal?;
+Amazonas;
+Goias;
+Mato Grosso;
+Bahia;
+Mato Grosso;
+|
+Qual e a capital da Espanha?;
+Lisboa;
+Barcelona;
+Madrid;
+Sevilha;
+Madrid;
+|
+Em que continente esta a Noruega?;
+Asia;
+Europa;
+Africa;
+Oceania;
+Europa;
+|
+Onde fica o Canal do Panama?;
+Brasil;
+Mexico;
+Panama;
+Colombia;
+Panama;
+|
+Qual e a capital de Portugal?;
+Porto;
+Lisboa;
+Faro;
+Braga;
+Lisboa;
+|
+Onde estao localizadas as Cataratas do Iguacu?;
+Amazonas;
+Parana;
+Sao Paulo;
+Mato Grosso do Sul;
+Parana;
+|
+Qual e a lingua oficial da maioria dos paises da America Latina?;
+Frances;
+Portugues;
+Espanhol;
+Ingles;
+Espanhol;
+|
+Em qual hemisferio esta o Brasil?;
+Norte;
+Sul;
+Leste;
+Oeste;
+Sul;
+|
+Qual e a capital do Chile?;
+Valparaiso;
+Santiago;
+Antofagasta;
+Concepcion;
+Santiago;
+|
+Qual e a capital da Bolivia?;
+La Paz;
+Sucre;
+Santa Cruz;
+Cochabamba;
+Sucre;
+|
+Qual e o pais com maior numero de ilhas?;
+Noruega;
+Filipinas;
+Suecia;
+Indonesia;
+Suecia;
+|
+Qual e o maior lago da America do Sul?;
+Lago Titicaca;
+Lago Maracaibo;
+Lagoa dos Patos;
+Lago Guaiba;
+Lago Titicaca;
+|
+Onde fica o Parque Nacional de Yellowstone?;
+Canada;
+Mexico;
+Estados Unidos;
+Argentina;
+Estados Unidos;
+|
+Qual e o principal bioma do nordeste brasileiro?;
+Amazonia;
+Cerrado;
+Caatinga;
+Mata Atlantica;
+Caatinga;
+|
+Onde se localiza a Cordilheira dos Andes?;
+America do Norte;
+Asia;
+America do Sul;
+Africa;
+America do Sul;
+|
+Qual e o clima predominante na Amazonia?;
+Frio;
+Desertico;
+Tropical umido;
+Temperado;
+Tropical umido;
+|
+Qual e a capital do estado do Ceara?;
+Fortaleza;
+Juazeiro do Norte;
+Sobral;
+Quixada;
+Fortaleza;
+|
+Qual e o nome do planeta vermelho?;
+Terra;
+Saturno;
+Marte;
+Urano;
+Marte;
+|
+Onde fica o Grand Canyon?;
+Brasil;
+Mexico;
+Estados Unidos;
+Canada;
+Estados Unidos;
+|
+Qual e o continente com mais paises?;
+Africa;
+Asia;
+Europa;
+America;
+Africa;
+|
+Em qual pais esta o monte Kilimanjaro?;
+Egito;
+Africa do Sul;
+Tanzania;
+Marrocos;
+Tanzania;
+|
+Onde esta o deserto do Saara?;
+America do Sul;
+Africa;
+Asia;
+Europa;
+Africa;
+|
+Qual e o menor pais do mundo?;
+Monaco;
+San Marino;
+Vaticano;
+Liechtenstein;
+Vaticano;
+|
+Qual e a capital do Peru?;
+Cusco;
+Lima;
+Arequipa;
+Trujillo;
+Lima;
+|
+Qual e o pais mais frio do mundo?;
+Canada;
+Russia;
+Groenlandia;
+Noruega;
+Russia;
+|
+Onde esta o Mar Vermelho?;
+Asia;
+Africa;
+Entre Africa e Asia;
+Europa;
+Entre Africa e Asia;
+|
+Onde fica o Polo Norte?;
+Antartida;
+Oceano Glacial Artico;
+Groenlandia;
+Russia;
+Oceano Glacial Artico;
+|
+Onde fica o Polo Sul?;
+Antartida;
+Australia;
+Chile;
+Nova Zelandia;
+Antartida;
+|
+Qual e a capital da Inglaterra?;
+Liverpool;
+Londres;
+Manchester;
+Oxford;
+Londres;
+|
+Onde esta o rio Tiete?;
+Rio Grande do Sul;
+Sao Paulo;
+Minas Gerais;
+Parana;
+Sao Paulo;
+|
+Onde fica a cordilheira do Himalaia?;
+Africa;
+Asia;
+Europa;
+America do Sul;
+Asia;
+|
+Em que continente esta o Brasil?;
+Africa;
+Asia;
+America do Sul;
+Europa;
+America do Sul;
+|
+Onde esta localizada a floresta de coniferas?;
+Africa;
+America do Sul;
+Regioes frias do hemisferio norte;
+Oceania;
+Regioes frias do hemisferio norte;
+|
+Onde fica o maior porto do Brasil?;
+Salvador;
+Santos;
+Fortaleza;
+Recife;
+Santos;
+|
+Qual e a capital do estado do Parana?;
+Maringa;
+Londrina;
+Curitiba;
+Cascavel;
+Curitiba;
+|
+Qual e a capital do estado do Para?;
+Belem;
+Santarem;
+Maraba;
+Altamira;
+Belem;
+|
+Qual e o maior rio da Europa?;
+Danubio;
+Volga;
+Reno;
+Tames;
+Volga;
+|
+Qual e o pais em forma de ilha ao sul da India?;
+Indonésia;
+Sri Lanka;
+Maldivas;
+Bangladesh;
+Sri Lanka;
+|
+Em qual continente esta a Groenlandia?;
+America do Norte;
+Europa;
+Asia;
+Antartida;
+America do Norte;
+|
+Qual oceano banha o Japao?;
+Atlantico;
+Indico;
+Pacifico;
+Glacial Artico;
+Pacifico;
+|
+Qual pais e famoso pelas tulipas e moinhos?;
+Alemanha;
+Holanda;
+Franca;
+Suica;
+Holanda;
+|
+Qual e a capital da Colombia?;
+Medellin;
+Cartagena;
+Bogota;
+Cali;
+Bogota;
+|
+Onde esta o Parque Nacional do Iguaçu?;
+Brasil;
+Argentina;
+Paraguai;
+Uruguai;
+Brasil;
+|
+Qual e a capital da Coreia do Sul?;
+Busan;
+Seul;
+Incheon;
+Daegu;
+Seul;
+|
+Qual e a capital da China?;
+Pequim;
+Xangai;
+Cantao;
+Hong Kong;
+Pequim;
+|
+Em que continente fica a Islandia?;
+Asia;
+Europa;
+America do Norte;
+Oceania;
+Europa;
+|
+Onde esta o rio Mekong?;
+Africa;
+America do Sul;
+Asia;
+Europa;
+Asia;
+|
+Onde esta localizada a floresta de Sherwood?;
+Escocia;
+Irlanda;
+Inglaterra;
+Franca;
+Inglaterra;
+|
+Qual e a capital do Uruguai?;
+Punta del Este;
+Montevidéu;
+Colonia;
+Salto;
+Montevidéu;
+|
+Qual e o pais mais alto do mundo em media de altitude?;
+Nepal;
+Tibete;
+Bolivia;
+Suica;
+Bolivia;
+|
+Qual e o maior pais da America do Sul?;
+Argentina;
+Brasil;
+Colombia;
+Chile;
+Brasil;
+|

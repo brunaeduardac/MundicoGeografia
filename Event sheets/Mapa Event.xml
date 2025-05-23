@@ -1,0 +1,1710 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Mapa Event</name>
+    <events>
+        <variable constant="0" name="TimerMapa" sid="602533428008067" static="0" type="number">60</variable>
+        <variable constant="0" name="PontuaçãoMapa" sid="428456485361367" static="0" type="number">0</variable>
+        <event-block sid="273940513410230">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="316561085489290" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="787186673303023" type="System">
+                    <param id="0" name="Variable">timer</param>
+                    <param id="1" name="Value">60</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="209666865891872">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="849113264631111" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="489252271587278" type="System">
+                    <param id="0" name="Variable">TimerMapa</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Set text" sid="414633281890458" type="tempomapa">
+                    <param id="0" name="Text">&quot;Tempo: &quot;&amp;TimerMapa</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="458076175408957">
+            <conditions>
+                <condition behavior="DragDrop" id="2" name="On drop" sid="227804502483145" type="SPACRE" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="817898880516567">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="928383626234304" type="SPACRE">
+                            <param id="0" name="Object">MapaVazio</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="695442820141399" type="Audio">
+                            <param id="0" name="Audio file">error</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">100</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="866125440362765" type="SPACRE" />
+                    </actions>
+                </event-block>
+                <event-block sid="379474199966986">
+                    <conditions>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="509096168619164" type="SPACRE">
+                            <param id="0" name="Object">MapaVazio</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="373561294155729">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="346977183026308" type="SPACRE">
+                            <param id="0" name="Object">Acre</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="173715201571876" type="Audio">
+                            <param id="0" name="Audio file">vgmenuhighlight</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">100</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="790363030477544" type="SPACRE" />
+                        <action id="-15" name="Set visible" sid="420815838118325" type="SAC">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="716440492379238" type="Acre">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="477698535365293" type="System">
+                            <param id="0" name="Variable">PontuaçãoMapa</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="752057123852762" type="PontoMapa">
+                            <param id="0" name="Text">&quot;Pontos: &quot;&amp;PontuaçãoMapa</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="942443342276581">
+            <conditions>
+                <condition behavior="DragDrop" id="2" name="On drop" sid="878407264759848" type="SPALAGOAS" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="299025285230166">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="597295251017258" type="SPALAGOAS">
+                            <param id="0" name="Object">MapaVazio</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="854923388642586" type="Audio">
+                            <param id="0" name="Audio file">error</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">100</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="275370101651150" type="SPALAGOAS" />
+                    </actions>
+                </event-block>
+                <event-block sid="968450578410280">
+                    <conditions>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="107713084355714" type="SPALAGOAS">
+                            <param id="0" name="Object">MapaVazio</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="261320875521787">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="610717992458321" type="SPALAGOAS">
+                            <param id="0" name="Object">Alagoas</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="148967727679401" type="Audio">
+                            <param id="0" name="Audio file">vgmenuhighlight</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">100</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="612627371914415" type="SPALAGOAS" />
+                        <action id="-15" name="Set visible" sid="869091087513702" type="Alagoas">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="609657754788173" type="SAL">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="645148671683461" type="System">
+                            <param id="0" name="Variable">PontuaçãoMapa</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="893881131955166" type="PontoMapa">
+                            <param id="0" name="Text">&quot;Pontos: &quot;&amp;PontuaçãoMapa</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="269610023289377">
+            <conditions>
+                <condition behavior="DragDrop" id="2" name="On drop" sid="588919583182880" type="SPAMAPA" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="524795829326154">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="247530884259941" type="SPAMAPA">
+                            <param id="0" name="Object">MapaVazio</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="195242589153371" type="Audio">
+                            <param id="0" name="Audio file">error</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="578296130857195" type="SPAMAPA" />
+                    </actions>
+                </event-block>
+                <event-block sid="957963991369340">
+                    <conditions>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="942254148351185" type="SPAMAPA">
+                            <param id="0" name="Object">MapaVazio</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="184380890731734">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="338440270736092" type="SPAMAPA">
+                            <param id="0" name="Object">Amapá</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="941173852725534" type="Audio">
+                            <param id="0" name="Audio file">vgmenuhighlight</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="958794939876723" type="SPAMAPA" />
+                        <action id="-15" name="Set visible" sid="148119024351234" type="Amapá">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="111062901046780" type="SAP">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="863850413639200" type="System">
+                            <param id="0" name="Variable">PontuaçãoMapa</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="338723741854825" type="PontoMapa">
+                            <param id="0" name="Text">&quot;Pontos: &quot;&amp;PontuaçãoMapa</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="497977000777457">
+            <conditions>
+                <condition behavior="DragDrop" id="2" name="On drop" sid="997291468206467" type="SPAMAZONAS" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="293356012902072">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="631881901396406" type="SPAMAZONAS">
+                            <param id="0" name="Object">MapaVazio</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="230242874866852" type="Audio">
+                            <param id="0" name="Audio file">error</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">100</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="898543014085497" type="SPAMAZONAS" />
+                    </actions>
+                </event-block>
+                <event-block sid="380280167254681">
+                    <conditions>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="953920636471738" type="SPAMAZONAS">
+                            <param id="0" name="Object">MapaVazio</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="980499054271033">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="952543816578341" type="SPAMAZONAS">
+                            <param id="0" name="Object">AM</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="786263424261624" type="Audio">
+                            <param id="0" name="Audio file">vgmenuhighlight</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">100</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="567636061269522" type="SPAMAZONAS" />
+                        <action id="-15" name="Set visible" sid="456441947649473" type="AM">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="936129128246130" type="SAM">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="971461049284903" type="System">
+                            <param id="0" name="Variable">PontuaçãoMapa</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="242741881437226" type="PontoMapa">
+                            <param id="0" name="Text">&quot;Pontos: &quot;&amp;PontuaçãoMapa</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="266666505307059">
+            <conditions>
+                <condition behavior="DragDrop" id="2" name="On drop" sid="731345264628943" type="SPBAHIA" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="487630622511064">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="835871302597088" type="SPBAHIA">
+                            <param id="0" name="Object">MapaVazio</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="276633493101893" type="Audio">
+                            <param id="0" name="Audio file">error</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">100</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="752484114241221" type="SPBAHIA" />
+                    </actions>
+                </event-block>
+                <event-block sid="445942251568736">
+                    <conditions>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="677603731709434" type="SPBAHIA">
+                            <param id="0" name="Object">MapaVazio</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="739110226184374">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="662511240134344" type="SPBAHIA">
+                            <param id="0" name="Object">BahiaFoto</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="138671587845439" type="Audio">
+                            <param id="0" name="Audio file">vgmenuhighlight</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">100</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="611514740193369" type="SPBAHIA" />
+                        <action id="-15" name="Set visible" sid="602946099080054" type="BahiaFoto">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="227582074259054" type="SBA">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="105874565365419" type="System">
+                            <param id="0" name="Variable">PontuaçãoMapa</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="892998881111629" type="PontoMapa">
+                            <param id="0" name="Text">&quot;Pontos: &quot;&amp;PontuaçãoMapa</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="683935328688665">
+            <conditions>
+                <condition behavior="DragDrop" id="2" name="On drop" sid="630287714408440" type="SPCEARA" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="248474046948565">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="515874085250343" type="SPCEARA">
+                            <param id="0" name="Object">MapaVazio</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="289997600611660" type="SPCEARA" />
+                        <action id="0" name="Play" sid="652938372855057" type="Audio">
+                            <param id="0" name="Audio file">error</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">100</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="525578168138100">
+                    <conditions>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="579616068255891" type="SPCEARA">
+                            <param id="0" name="Object">MapaVazio</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="904984148508505">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="432638698981768" type="SPCEARA">
+                            <param id="0" name="Object">Ceará</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="197665220961270" type="Audio">
+                            <param id="0" name="Audio file">vgmenuhighlight</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">100</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="645547962412581" type="SPCEARA" />
+                        <action id="-15" name="Set visible" sid="480180456175670" type="Ceará">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="283603219776190" type="SCE">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="334059067300760" type="System">
+                            <param id="0" name="Variable">PontuaçãoMapa</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="584149163430060" type="PontoMapa">
+                            <param id="0" name="Text">&quot;Pontos: &quot;&amp;PontuaçãoMapa</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="324134030255497">
+            <conditions>
+                <condition behavior="DragDrop" id="2" name="On drop" sid="514089162159581" type="SPDISTRITO" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="952241290689251">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="286000720076925" type="SPDISTRITO">
+                            <param id="0" name="Object">MapaVazio</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="732773542564839" type="SPDISTRITO" />
+                        <action id="0" name="Play" sid="521972014352603" type="Audio">
+                            <param id="0" name="Audio file">error</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">100</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="812551053643262">
+                    <conditions>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="373339643549795" type="SPDISTRITO">
+                            <param id="0" name="Object">MapaVazio</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="454143140147534">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="347406731433746" type="SPDISTRITO">
+                            <param id="0" name="Object">DistritoFederal</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="859082413041421" type="Audio">
+                            <param id="0" name="Audio file">vgmenuhighlight</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">100</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="695962155674210" type="SPDISTRITO" />
+                        <action id="-15" name="Set visible" sid="401604395687979" type="DistritoFederal">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="506538400298083" type="SDF">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="154946501127815" type="System">
+                            <param id="0" name="Variable">PontuaçãoMapa</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="758641665570780" type="PontoMapa">
+                            <param id="0" name="Text">&quot;Pontos: &quot;&amp;PontuaçãoMapa</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="665477695930598">
+            <conditions>
+                <condition behavior="DragDrop" id="2" name="On drop" sid="870454560369224" type="SPESPIRITO" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="101246489907110">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="308793841355280" type="SPESPIRITO">
+                            <param id="0" name="Object">MapaVazio</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="709440052051960" type="Audio">
+                            <param id="0" name="Audio file">error</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">100</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="547923645625269" type="SPESPIRITO" />
+                    </actions>
+                </event-block>
+                <event-block sid="353763600736348">
+                    <conditions>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="152405000188014" type="SPESPIRITO">
+                            <param id="0" name="Object">MapaVazio</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="483258105722789">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="992381533703835" type="SPESPIRITO">
+                            <param id="0" name="Object">EspiritoSanto</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="283218289526196" type="Audio">
+                            <param id="0" name="Audio file">vgmenuhighlight</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">100</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="410278455425808" type="SPESPIRITO" />
+                        <action id="-15" name="Set visible" sid="264138151792909" type="EspiritoSanto">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="582520795678014" type="SES">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="426889408254431" type="System">
+                            <param id="0" name="Variable">PontuaçãoMapa</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="684001881468596" type="PontoMapa">
+                            <param id="0" name="Text">&quot;Pontos: &quot;&amp;PontuaçãoMapa</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="345974085486735">
+            <conditions>
+                <condition behavior="DragDrop" id="2" name="On drop" sid="134855652152991" type="SPGOIAS" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="338465469253120">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="737467042413771" type="SPGOIAS">
+                            <param id="0" name="Object">MapaVazio</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="583048298547055" type="Audio">
+                            <param id="0" name="Audio file">error</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">100</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="871336207972455" type="SPGOIAS" />
+                    </actions>
+                </event-block>
+                <event-block sid="272909734690617">
+                    <conditions>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="479692894643131" type="SPGOIAS">
+                            <param id="0" name="Object">MapaVazio</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="958603259411558">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="561673066726413" type="SPGOIAS">
+                            <param id="0" name="Object">Goias</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="676468331220757" type="Audio">
+                            <param id="0" name="Audio file">vgmenuhighlight</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">100</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="683605983518670" type="SPGOIAS" />
+                        <action id="-15" name="Set visible" sid="250543920315159" type="Goias">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="468722823945358" type="SGO">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="250715426314952" type="System">
+                            <param id="0" name="Variable">PontuaçãoMapa</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="100096975603296" type="PontoMapa">
+                            <param id="0" name="Text">&quot;Pontos: &quot;&amp;PontuaçãoMapa</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="357800599973410">
+            <conditions>
+                <condition behavior="DragDrop" id="2" name="On drop" sid="904168937962354" type="SPMARANHÃO" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="122667016991048">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="530153950186167" type="SPMARANHÃO">
+                            <param id="0" name="Object">MapaVazio</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="803940130166127" type="Audio">
+                            <param id="0" name="Audio file">error</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">100</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="380173850822203" type="SPMARANHÃO" />
+                    </actions>
+                </event-block>
+                <event-block sid="801658191875773">
+                    <conditions>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="431049388937081" type="SPMARANHÃO">
+                            <param id="0" name="Object">MapaVazio</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="815180552713407">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="396667223720174" type="SPMARANHÃO">
+                            <param id="0" name="Object">Marahão</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="630359277819589" type="Audio">
+                            <param id="0" name="Audio file">vgmenuhighlight</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">100</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="826385722723055" type="SPMARANHÃO" />
+                        <action id="-15" name="Set visible" sid="907302276332850" type="Marahão">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="495719593545731" type="System">
+                            <param id="0" name="Variable">PontuaçãoMapa</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="375781037063912" type="PontoMapa">
+                            <param id="0" name="Text">&quot;Pontos: &quot;&amp;PontuaçãoMapa</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="855062068199340" type="SMA">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="140262130207959">
+            <conditions>
+                <condition behavior="DragDrop" id="2" name="On drop" sid="672109013185323" type="SPMATOGROSSO" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="515296010212457">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="344923737968950" type="SPMATOGROSSO">
+                            <param id="0" name="Object">MapaVazio</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="575829102777121" type="Audio">
+                            <param id="0" name="Audio file">error</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">100</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="652253228362243" type="SPMATOGROSSO" />
+                    </actions>
+                </event-block>
+                <event-block sid="727383228122280">
+                    <conditions>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="218265607010250" type="SPMATOGROSSO">
+                            <param id="0" name="Object">MapaVazio</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="556055552331194">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="250921448312439" type="SPMATOGROSSO">
+                            <param id="0" name="Object">MatoGrosso</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="547137854579693" type="Audio">
+                            <param id="0" name="Audio file">vgmenuhighlight</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">100</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="900336165363537" type="SPMATOGROSSO" />
+                        <action id="-15" name="Set visible" sid="738986570006732" type="MatoGrosso">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="133187307198868" type="SMG">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="306148900422526" type="System">
+                            <param id="0" name="Variable">PontuaçãoMapa</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="323621431129876" type="PontoMapa">
+                            <param id="0" name="Text">&quot;Pontos: &quot;&amp;PontuaçãoMapa</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="526974295343637">
+            <conditions>
+                <condition behavior="DragDrop" id="2" name="On drop" sid="253919307594129" type="SPMATOSUL" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="854868185978105">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="762572723943523" type="SPMATOSUL">
+                            <param id="0" name="Object">MapaVazio</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="945629133010248" type="Audio">
+                            <param id="0" name="Audio file">error</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">100</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="938606726644393" type="SPMATOSUL" />
+                    </actions>
+                </event-block>
+                <event-block sid="208281498623186">
+                    <conditions>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="844495470089787" type="SPMATOSUL">
+                            <param id="0" name="Object">MapaVazio</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="782179298307540">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="932047529703965" type="SPMATOSUL">
+                            <param id="0" name="Object">MGDoSul</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="797197598328653" type="Audio">
+                            <param id="0" name="Audio file">vgmenuhighlight</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">100</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="362483472251249" type="SPMATOSUL" />
+                        <action id="-15" name="Set visible" sid="864436848219906" type="MGDoSul">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="670792076039982" type="SMS">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="235430158240588" type="System">
+                            <param id="0" name="Variable">PontuaçãoMapa</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="792773951666671" type="PontoMapa">
+                            <param id="0" name="Text">&quot;Pontos: &quot;&amp;PontuaçãoMapa</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="943224011776528">
+            <conditions>
+                <condition behavior="DragDrop" id="2" name="On drop" sid="425669202445103" type="SPMINAS" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="430799002597119">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="347085342785339" type="SPMINAS">
+                            <param id="0" name="Object">MapaVazio</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="285649812384667" type="Audio">
+                            <param id="0" name="Audio file">error</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">100</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="233976435766477" type="SPMINAS" />
+                    </actions>
+                </event-block>
+                <event-block sid="882842491914154">
+                    <conditions>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="838241112196840" type="SPMINAS">
+                            <param id="0" name="Object">MapaVazio</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="320719865545809">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="893188515989574" type="SPMINAS">
+                            <param id="0" name="Object">MinasGerais</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="119259838873360" type="Audio">
+                            <param id="0" name="Audio file">vgmenuhighlight</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">100</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="153152119899653" type="SPMINAS" />
+                        <action id="-15" name="Set visible" sid="392918676436831" type="MinasGerais">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="575963947890555" type="SMG">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="700568076532819" type="System">
+                            <param id="0" name="Variable">PontuaçãoMapa</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="958891958307681" type="PontoMapa">
+                            <param id="0" name="Text">&quot;Pontos: &quot;&amp;PontuaçãoMapa</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="335939870553631">
+            <conditions>
+                <condition behavior="DragDrop" id="2" name="On drop" sid="994690185084637" type="SPPARA" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="703786156917311">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="496288036038238" type="SPPARA">
+                            <param id="0" name="Object">MapaVazio</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="271249473270720" type="Audio">
+                            <param id="0" name="Audio file">error</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">100</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="106810316543644" type="SPPARA" />
+                    </actions>
+                </event-block>
+                <event-block sid="585718434340630">
+                    <conditions>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="779123844193503" type="SPPARA">
+                            <param id="0" name="Object">MapaVazio</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="169721458808475">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="992546675563016" type="SPPARA">
+                            <param id="0" name="Object">Pará</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="160186334282718" type="Audio">
+                            <param id="0" name="Audio file">vgmenuhighlight</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">100</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="523272499510922" type="SPPARA" />
+                        <action id="-15" name="Set visible" sid="793631086441037" type="Pará">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="271077202883515" type="SPA">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="529792232215013" type="System">
+                            <param id="0" name="Variable">PontuaçãoMapa</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="657790704398427" type="PontoMapa">
+                            <param id="0" name="Text">&quot;Pontos: &quot;&amp;PontuaçãoMapa</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="436522962645199">
+            <conditions>
+                <condition behavior="DragDrop" id="2" name="On drop" sid="982904028724936" type="SPPARAIBA" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="106818070208830">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="524000774920913" type="SPPARAIBA">
+                            <param id="0" name="Object">MapaVazio</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="931195239626432" type="Audio">
+                            <param id="0" name="Audio file">error</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">100</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="480538385185429" type="SPPARAIBA" />
+                    </actions>
+                </event-block>
+                <event-block sid="748072258207888">
+                    <conditions>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="200000214742205" type="SPPARAIBA">
+                            <param id="0" name="Object">MapaVazio</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="764281534982130">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="126639057712325" type="SPPARAIBA">
+                            <param id="0" name="Object">paraiba</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="129730826976961" type="Audio">
+                            <param id="0" name="Audio file">vgmenuhighlight</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">100</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="313982446589119" type="SPPARAIBA" />
+                        <action id="-15" name="Set visible" sid="981619381992935" type="paraiba">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="858835242483829" type="SPB">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="158425696981895" type="System">
+                            <param id="0" name="Variable">PontuaçãoMapa</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="400197638130391" type="PontoMapa">
+                            <param id="0" name="Text">&quot;Pontos: &quot;&amp;PontuaçãoMapa</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="575817800475655">
+            <conditions>
+                <condition behavior="DragDrop" id="2" name="On drop" sid="732422393448366" type="SPPARANÁ" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="138689188211909">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="505420769908990" type="SPPARANÁ">
+                            <param id="0" name="Object">MapaVazio</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="582523882876390" type="Audio">
+                            <param id="0" name="Audio file">error</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">100</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="577959892856198" type="SPPARANÁ" />
+                    </actions>
+                </event-block>
+                <event-block sid="452472255021164">
+                    <conditions>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="871007314385977" type="SPPARANÁ">
+                            <param id="0" name="Object">MapaVazio</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="828784694332404">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="280576596943252" type="SPPARANÁ">
+                            <param id="0" name="Object">Parana</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="490473507187073" type="Audio">
+                            <param id="0" name="Audio file">vgmenuhighlight</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">100</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="205851266994748" type="SPPARANÁ" />
+                        <action id="-15" name="Set visible" sid="794031727393353" type="Parana">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="565343203229605" type="SPR">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="168367695002721" type="System">
+                            <param id="0" name="Variable">PontuaçãoMapa</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="971331315448731" type="PontoMapa">
+                            <param id="0" name="Text">&quot;Pontos: &quot;&amp;PontuaçãoMapa</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="760484491246102">
+            <conditions>
+                <condition behavior="DragDrop" id="2" name="On drop" sid="403225558762497" type="SPPERNAMBUCO" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="678238453669359">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="445541970858048" type="SPPERNAMBUCO">
+                            <param id="0" name="Object">MapaVazio</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="704314450705133" type="Audio">
+                            <param id="0" name="Audio file">error</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">100</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="130612296217545" type="SPPERNAMBUCO" />
+                    </actions>
+                </event-block>
+                <event-block sid="174967127883767">
+                    <conditions>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="440117853481953" type="SPPERNAMBUCO">
+                            <param id="0" name="Object">MapaVazio</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="631795774858955">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="936465265700444" type="SPPERNAMBUCO">
+                            <param id="0" name="Object">Pernambuco</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="876033198633568" type="Audio">
+                            <param id="0" name="Audio file">vgmenuhighlight</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">100</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="847438692175853" type="SPPERNAMBUCO" />
+                        <action id="-15" name="Set visible" sid="853745854537384" type="Pernambuco">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="780971587388464" type="SPE">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="780114927303099" type="System">
+                            <param id="0" name="Variable">PontuaçãoMapa</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="161912191006277" type="PontoMapa">
+                            <param id="0" name="Text">&quot;Pontos: &quot;&amp;PontuaçãoMapa</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="807674058991171">
+            <conditions>
+                <condition behavior="DragDrop" id="2" name="On drop" sid="605051925296973" type="SPPIAUI" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="603941308540351">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="150256407553137" type="SPPIAUI">
+                            <param id="0" name="Object">MapaVazio</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="934935254447831" type="Audio">
+                            <param id="0" name="Audio file">error</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">100</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="258510489861372" type="SPPIAUI" />
+                    </actions>
+                </event-block>
+                <event-block sid="534095288087258">
+                    <conditions>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="760337367619491" type="SPPIAUI">
+                            <param id="0" name="Object">MapaVazio</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="238692372608780">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="360278821710943" type="SPPIAUI">
+                            <param id="0" name="Object">Piaui</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="113494929526179" type="Audio">
+                            <param id="0" name="Audio file">vgmenuhighlight</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">100</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="605355992691980" type="SPPIAUI" />
+                        <action id="-15" name="Set visible" sid="813460384935276" type="Piaui">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="188649241730128" type="SPI">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="237562597017620" type="System">
+                            <param id="0" name="Variable">PontuaçãoMapa</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="783076891377839" type="PontoMapa">
+                            <param id="0" name="Text">&quot;Pontos: &quot;&amp;PontuaçãoMapa</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="399952723804980">
+            <conditions>
+                <condition behavior="DragDrop" id="2" name="On drop" sid="861917289304319" type="SPRIONORTE" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="422004086302857">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="160708199355385" type="SPRIONORTE">
+                            <param id="0" name="Object">MapaVazio</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="556638679577682" type="Audio">
+                            <param id="0" name="Audio file">error</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">100</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="567596424308086" type="SPRIONORTE" />
+                    </actions>
+                </event-block>
+                <event-block sid="511230372392922">
+                    <conditions>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="379209063864542" type="SPRIONORTE">
+                            <param id="0" name="Object">MapaVazio</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="190701433051618">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="791594044806907" type="SPRIONORTE">
+                            <param id="0" name="Object">RioGrandedoNorte</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="861549043175260" type="Audio">
+                            <param id="0" name="Audio file">vgmenuhighlight</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">100</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="563423298337919" type="SPRIONORTE" />
+                        <action id="-15" name="Set visible" sid="612239912042521" type="RioGrandedoNorte">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="204992148759834" type="SRN">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="621900868416988" type="System">
+                            <param id="0" name="Variable">PontuaçãoMapa</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="793488056823756" type="PontoMapa">
+                            <param id="0" name="Text">&quot;Pontos: &quot;&amp;PontuaçãoMapa</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="301525840696771">
+            <conditions>
+                <condition behavior="DragDrop" id="2" name="On drop" sid="507869721014810" type="SPRIOSUL" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="820235775521307">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="534873334893390" type="SPRIOSUL">
+                            <param id="0" name="Object">MapaVazio</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="946879493832676" type="Audio">
+                            <param id="0" name="Audio file">error</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">100</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="147398901113591" type="SPRIOSUL" />
+                    </actions>
+                </event-block>
+                <event-block sid="367650929875896">
+                    <conditions>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="344644072485251" type="SPRIOSUL">
+                            <param id="0" name="Object">MapaVazio</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="344196206189040">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="229839835606300" type="SPRIOSUL">
+                            <param id="0" name="Object">RioGrandeSul</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="959993184218681" type="Audio">
+                            <param id="0" name="Audio file">vgmenuhighlight</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">100</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="297209059820427" type="SPRIOSUL" />
+                        <action id="-15" name="Set visible" sid="118628753896658" type="RioGrandeSul">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="590430979801140" type="SRS">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="168377093711402" type="System">
+                            <param id="0" name="Variable">PontuaçãoMapa</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="837520651107427" type="PontoMapa">
+                            <param id="0" name="Text">&quot;Pontos: &quot;&amp;PontuaçãoMapa</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="739124990056058">
+            <conditions>
+                <condition behavior="DragDrop" id="2" name="On drop" sid="641125251276364" type="SPRONDONIA" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="475054787421999">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="282858281002932" type="SPRONDONIA">
+                            <param id="0" name="Object">MapaVazio</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="191056372991281" type="Audio">
+                            <param id="0" name="Audio file">error</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">100</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="148816143773072" type="SPRONDONIA" />
+                    </actions>
+                </event-block>
+                <event-block sid="495293403997164">
+                    <conditions>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="732419914295796" type="SPRONDONIA">
+                            <param id="0" name="Object">MapaVazio</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="163721989229147">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="896612311434590" type="SPRONDONIA">
+                            <param id="0" name="Object">Rondonia</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="450074013765424" type="Audio">
+                            <param id="0" name="Audio file">vgmenuhighlight</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">100</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="877574349618011" type="SPRONDONIA" />
+                        <action id="-15" name="Set visible" sid="184615771784845" type="Rondonia">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="874905398960075" type="SRO">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="715724155480254" type="System">
+                            <param id="0" name="Variable">PontuaçãoMapa</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="432157711933408" type="PontoMapa">
+                            <param id="0" name="Text">&quot;Pontos: &quot;&amp;PontuaçãoMapa</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="946672358263315">
+            <conditions>
+                <condition behavior="DragDrop" id="2" name="On drop" sid="542062062909368" type="SPRORAIMA" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="944018192497386">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="859780081437525" type="SPRORAIMA">
+                            <param id="0" name="Object">MapaVazio</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="836531560298214" type="Audio">
+                            <param id="0" name="Audio file">error</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">100</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="999101470195242" type="SPRORAIMA" />
+                    </actions>
+                </event-block>
+                <event-block sid="275703157680834">
+                    <conditions>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="680514519980987" type="SPRORAIMA">
+                            <param id="0" name="Object">MapaVazio</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="168827955910161">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="493296673918877" type="SPRORAIMA">
+                            <param id="0" name="Object">Roraima</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="696295047905137" type="SPRORAIMA" />
+                        <action id="-15" name="Set visible" sid="982753713786918" type="Roraima">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="803689924122543" type="SRR">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="842749253419071" type="System">
+                            <param id="0" name="Variable">PontuaçãoMapa</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="616761924580011" type="PontoMapa">
+                            <param id="0" name="Text">&quot;Pontos: &quot;&amp;PontuaçãoMapa</param>
+                        </action>
+                        <action id="0" name="Play" sid="434122768143456" type="Audio">
+                            <param id="0" name="Audio file">vgmenuhighlight</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">100</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="400483923911588">
+            <conditions>
+                <condition behavior="DragDrop" id="2" name="On drop" sid="607936371465404" type="SPSANTACATARINA" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="775421396117804">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="280741512595400" type="SPSANTACATARINA">
+                            <param id="0" name="Object">MapaVazio</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="240336397295998" type="Audio">
+                            <param id="0" name="Audio file">error</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">100</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="765415123212792" type="SPSANTACATARINA" />
+                    </actions>
+                </event-block>
+                <event-block sid="506774319717612">
+                    <conditions>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="223529475537316" type="SPSANTACATARINA">
+                            <param id="0" name="Object">MapaVazio</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="740250664523594">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="929244328079131" type="SPSANTACATARINA">
+                            <param id="0" name="Object">SantaCtarina</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="605054349874139" type="Audio">
+                            <param id="0" name="Audio file">vgmenuhighlight</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">100</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="134385606579713" type="SPSANTACATARINA" />
+                        <action id="-15" name="Set visible" sid="988208597615657" type="SantaCtarina">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="132813566633632" type="SSC">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="453057933442740" type="System">
+                            <param id="0" name="Variable">PontuaçãoMapa</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="638643042491540" type="PontoMapa">
+                            <param id="0" name="Text">&quot;Pontos: &quot;&amp;PontuaçãoMapa</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="674785135403802">
+            <conditions>
+                <condition behavior="DragDrop" id="2" name="On drop" sid="584716847942472" type="SPSAOPAULO" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="336279155754059">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="371991157121359" type="SPSAOPAULO">
+                            <param id="0" name="Object">MapaVazio</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="553989616790048" type="Audio">
+                            <param id="0" name="Audio file">error</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">100</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="966786395630127" type="SPSAOPAULO" />
+                    </actions>
+                </event-block>
+                <event-block sid="388901364733832">
+                    <conditions>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="269142213095018" type="SPSAOPAULO">
+                            <param id="0" name="Object">MapaVazio</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="742601506029626">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="556170717410886" type="SPSAOPAULO">
+                            <param id="0" name="Object">SP</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="620670425614131" type="Audio">
+                            <param id="0" name="Audio file">vgmenuhighlight</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">100</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="870905298202890" type="SPSAOPAULO" />
+                        <action id="-15" name="Set visible" sid="952115135390400" type="SP">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="558746253917121" type="SSP">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="598137615448300" type="System">
+                            <param id="0" name="Variable">PontuaçãoMapa</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="897385827978787" type="PontoMapa">
+                            <param id="0" name="Text">&quot;Pontos: &quot;&amp;PontuaçãoMapa</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="150057542084492">
+            <conditions>
+                <condition behavior="DragDrop" id="2" name="On drop" sid="646203093212110" type="SPSERGIPE" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="642202152631993">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="652989446158615" type="SPSERGIPE">
+                            <param id="0" name="Object">MapaVazio</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="618360246887084" type="Audio">
+                            <param id="0" name="Audio file">error</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">100</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="106875058374062" type="SPSERGIPE" />
+                    </actions>
+                </event-block>
+                <event-block sid="636980509132079">
+                    <conditions>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="662923666261680" type="SPSERGIPE">
+                            <param id="0" name="Object">MapaVazio</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="334432056798829">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="777105157227591" type="SPSERGIPE">
+                            <param id="0" name="Object">Sergipe</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="150677233081084" type="Audio">
+                            <param id="0" name="Audio file">winneris</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">100</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="388266901721975" type="SPSERGIPE" />
+                        <action id="-15" name="Set visible" sid="127404324430981" type="Sergipe">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="978223674162631" type="SSE">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="902231210217793" type="System">
+                            <param id="0" name="Variable">PontuaçãoMapa</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="854145486443444" type="PontoMapa">
+                            <param id="0" name="Text">&quot;Pontos: &quot;&amp;PontuaçãoMapa</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="507550279154334">
+            <conditions>
+                <condition behavior="DragDrop" id="2" name="On drop" sid="917803709128391" type="SPTOCANTINS" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="936879564624014">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="160030018531942" type="SPTOCANTINS">
+                            <param id="0" name="Object">MapaVazio</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="336675588454270" type="Audio">
+                            <param id="0" name="Audio file">error</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">100</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="585476752075369" type="SPTOCANTINS" />
+                    </actions>
+                </event-block>
+                <event-block sid="214052752461813">
+                    <conditions>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="376688522146807" type="SPTOCANTINS">
+                            <param id="0" name="Object">MapaVazio</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="567900923404128">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="304287482456120" type="SPTOCANTINS">
+                            <param id="0" name="Object">Tocantins</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="589712996234208" type="Audio">
+                            <param id="0" name="Audio file">vgmenuhighlight</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">100</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="420057062976615" type="SPTOCANTINS" />
+                        <action id="-15" name="Set visible" sid="431473487967934" type="Tocantins">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="469275263021806" type="STO">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="888786369787907" type="System">
+                            <param id="0" name="Variable">PontuaçãoMapa</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="117784112456263" type="PontoMapa">
+                            <param id="0" name="Text">&quot;Pontos: &quot;&amp;PontuaçãoMapa</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="487746805670311">
+            <conditions>
+                <condition behavior="DragDrop" id="2" name="On drop" sid="112765356529553" type="SPRIODEJNAEIRO" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="691121883793083">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="319997293351860" type="SPRIODEJNAEIRO">
+                            <param id="0" name="Object">MapaVazio</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="600871162092239" type="Audio">
+                            <param id="0" name="Audio file">error</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">100</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="427687403467720" type="SPRIODEJNAEIRO" />
+                    </actions>
+                </event-block>
+                <event-block sid="512053177536598">
+                    <conditions>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="325670625093840" type="SPRIODEJNAEIRO">
+                            <param id="0" name="Object">MapaVazio</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="790788481460383">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="908252693826765" type="SPRIODEJNAEIRO">
+                            <param id="0" name="Object">RJ</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="389074557937007" type="Audio">
+                            <param id="0" name="Audio file">vgmenuhighlight</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">100</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="524794401795005" type="SPRIODEJNAEIRO" />
+                        <action id="-15" name="Set visible" sid="322630600576659" type="RJ">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="460138128841813" type="SRJ">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="394412747021199" type="System">
+                            <param id="0" name="Variable">PontuaçãoMapa</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="836566642970773" type="PontoMapa">
+                            <param id="0" name="Text">&quot;Pontos: &quot;&amp;PontuaçãoMapa</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="158651163583510">
+            <conditions>
+                <condition id="17" name="On tap object" sid="420007493885739" type="Touch">
+                    <param id="0" name="Object">FecharMapa</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="357934645239811" type="System">
+                    <param id="0" name="Layout">Menu Layout</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="825526272626755">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="740236932398505" type="System">
+                    <param id="0" name="Variable">TimerMapa</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="193508888449638" type="System">
+                    <param id="0" name="Seconds">10</param>
+                </action>
+                <action id="-26" name="Restart layout" sid="377647991547801" type="System" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

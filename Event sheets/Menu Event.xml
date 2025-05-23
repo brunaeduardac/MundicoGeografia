@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Menu Event</name>
+    <events>
+        <variable constant="0" name="highscore2" sid="929598910835632" static="0" type="number">0</variable>
+        <variable constant="0" name="highscore" sid="208899802801513" static="0" type="number">0</variable>
+        <variable constant="0" name="index" sid="477562697418579" static="0" type="number">0</variable>
+        <variable constant="1" name="TOTAL_QUESTIONS" sid="907673291583851" static="0" type="number">100</variable>
+        <event-block sid="719856104154824">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="128962322581395" type="System" />
+            </conditions>
+            <actions>
+                <action id="1" name="Request project file" sid="615524533953983" type="AJAX">
+                    <param id="0" name="Tag">&quot;load questions&quot;</param>
+                    <param id="1" name="File">PerguntasMundicoGeografia.txt</param>
+                </action>
+                <action id="5" name="Check item exists" sid="734847779781528" type="LocalStorage">
+                    <param id="0" name="Key">&quot;keyHighscore&quot;</param>
+                </action>
+                <action id="5" name="Check item exists" sid="659861018577033" type="LocalStorage">
+                    <param id="0" name="Key">&quot;keyHighscore2&quot;</param>
+                </action>
+                <action id="1" name="Set size" sid="602822427152282" type="Array">
+                    <param id="0" name="Width">100</param>
+                    <param id="1" name="Height">6</param>
+                    <param id="2" name="Depth">1</param>
+                </action>
+                <action id="2" name="Stop" sid="737513026502050" type="Ativaraudio" />
+                <action id="2" name="Stop" sid="313060364334442" type="Desativaraudio" />
+            </actions>
+        </event-block>
+        <event-block sid="796598963713423">
+            <conditions>
+                <condition id="0" name="On completed" sid="248920037363363" type="AJAX">
+                    <param id="0" name="Tag">&quot;load questions&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="885525758186175" type="Function">
+                    <param id="0" name="Name">&quot;getQuestions&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="212574320931541">
+            <conditions>
+                <condition id="0" name="On function" sid="134636190163580" type="Function">
+                    <param id="0" name="Name">&quot;getQuestions&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="104153065116445">
+                    <conditions>
+                        <condition id="-10" name="For" sid="250981538812592" type="System">
+                            <param id="0" name="Name">&quot;each questions&quot;</param>
+                            <param id="1" name="Start index">0</param>
+                            <param id="2" name="End index">99</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set at X" sid="366281178925466" type="Array">
+                            <param id="0" name="X">index</param>
+                            <param id="1" name="Value">trim(tokenat(AJAX.LastData,index,&quot;|&quot;))</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="175274453121823" type="System">
+                            <param id="0" name="Variable">index</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="486542137332465">
+            <conditions>
+                <condition id="3" name="On touched object" sid="948732855970477" type="Touch">
+                    <param id="0" name="Object">quiz</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="579430474927551" type="Audio">
+                    <param id="0" name="Audio file">Menu Selection Click</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">5</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="688141099992186" type="System">
+                    <param id="0" name="Layout">Game Quiz Layout</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="540178540073834">
+            <conditions>
+                <condition id="17" name="On tap object" sid="336392337844673" type="Touch">
+                    <param id="0" name="Object">bandeiras</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="706491256154312" type="Audio">
+                    <param id="0" name="Audio file">Menu Selection Click</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">5</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="876888904273224" type="System">
+                    <param id="0" name="Layout">Game Bandeiras Layout</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="704093918745345">
+            <conditions>
+                <condition id="3" name="On touched object" sid="152623297957955" type="Touch">
+                    <param id="0" name="Object">arrastesolte</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="443961972760806" type="Audio">
+                    <param id="0" name="Audio file">Menu Selection Click</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">5</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="296244802610899" type="System">
+                    <param id="0" name="Layout">Mapa Layout</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="723810256881607">
+            <conditions>
+                <condition id="9" name="On item exists" sid="395786809935458" type="LocalStorage">
+                    <param id="0" name="Key">&quot;keyHighscore&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Get item" sid="190575117524970" type="LocalStorage">
+                    <param id="0" name="Key">&quot;keyHighscore&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="901660383308660">
+            <conditions>
+                <condition id="10" name="On item missing" sid="405213834851372" type="LocalStorage">
+                    <param id="0" name="Key">&quot;keyHighscore&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set item" sid="301218286219619" type="LocalStorage">
+                    <param id="0" name="Key">&quot;keyHighscore&quot;</param>
+                    <param id="1" name="Value">highscore</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="498343795956448">
+            <conditions>
+                <condition id="1" name="On item get" sid="897550959549332" type="LocalStorage">
+                    <param id="0" name="Key">&quot;keyHighscore&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="847600232876704" type="System">
+                    <param id="0" name="Variable">highscore</param>
+                    <param id="1" name="Value">LocalStorage.ItemValue</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="296177697821412">
+            <conditions>
+                <condition id="9" name="On item exists" sid="407748110518422" type="LocalStorage">
+                    <param id="0" name="Key">&quot;keyHighscore2&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Get item" sid="583305535631442" type="LocalStorage">
+                    <param id="0" name="Key">&quot;keyHighscore2&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="698343877934867">
+            <conditions>
+                <condition id="10" name="On item missing" sid="152736760403675" type="LocalStorage">
+                    <param id="0" name="Key">&quot;keyHighscore2&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set item" sid="971174052003724" type="LocalStorage">
+                    <param id="0" name="Key">&quot;keyHighscore2&quot;</param>
+                    <param id="1" name="Value">highscore2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="151473716172249">
+            <conditions>
+                <condition id="1" name="On item get" sid="335236814441673" type="LocalStorage">
+                    <param id="0" name="Key">&quot;keyHighscore2&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="759676550253201" type="System">
+                    <param id="0" name="Variable">highscore2</param>
+                    <param id="1" name="Value">LocalStorage.ItemValue</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="876300009373349">
+            <conditions>
+                <condition id="17" name="On tap object" sid="105713067370691" type="Touch">
+                    <param id="0" name="Object">OpçõesBtn</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="559574262991144" type="System">
+                    <param id="0" name="Layout">Opções Layout</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="964710500349836">
+            <conditions>
+                <condition id="17" name="On tap object" sid="999221282598527" type="Touch">
+                    <param id="0" name="Object">btnsairopções</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="281689486781518" type="System">
+                    <param id="0" name="Layout">Menu Layout</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="204112425918207">
+            <conditions>
+                <condition id="17" name="On tap object" sid="677443073561096" type="Touch">
+                    <param id="0" name="Object">Ativaraudio</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="8" name="Set silent" sid="377617234317607" type="Audio">
+                    <param id="0" name="Mode">1</param>
+                </action>
+                <action id="5" name="Set frame" sid="656120464702029" type="Ativaraudio">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="706199859367275" type="System">
+                    <param id="0" name="Seconds">0.4</param>
+                </action>
+                <action id="5" name="Set frame" sid="265430715782292" type="Ativaraudio">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="449222334684693">
+            <conditions>
+                <condition id="17" name="On tap object" sid="641560846092445" type="Touch">
+                    <param id="0" name="Object">Desativaraudio</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="8" name="Set silent" sid="697265312279915" type="Audio">
+                    <param id="0" name="Mode">0</param>
+                </action>
+                <action id="5" name="Set frame" sid="636825054654059" type="Desativaraudio">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="717649854881821" type="System">
+                    <param id="0" name="Seconds">0.4</param>
+                </action>
+                <action id="5" name="Set frame" sid="996724559782383" type="Desativaraudio">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

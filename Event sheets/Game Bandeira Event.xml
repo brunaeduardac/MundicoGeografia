@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Game Bandeira Event</name>
+    <events>
+        <variable constant="0" name="timerbandeira" sid="442950940664488" static="0" type="number">20</variable>
+        <variable constant="0" name="scorebandeira" sid="844032794161991" static="0" type="number">0</variable>
+        <event-block sid="335597159931253">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="862635259694779" type="System" />
+            </conditions>
+            <actions>
+                <action id="2" name="Stop" sid="288839308590983" type="BackPergunta1" />
+                <action id="2" name="Stop" sid="632904850430099" type="BackPergunta2" />
+                <action id="-9" name="Set value" sid="647654269418670" type="System">
+                    <param id="0" name="Variable">timerbandeira</param>
+                    <param id="1" name="Value">20</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="556419829707912">
+            <conditions>
+                <condition id="3" name="On touched object" sid="392367134972664" type="Touch">
+                    <param id="0" name="Object">Amazonas</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="172268356764640" type="Audio">
+                    <param id="0" name="Audio file">vgmenuhighlight</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">100</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-10" name="Add to" sid="936021815344231" type="System">
+                    <param id="0" name="Variable">scorebandeira</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Set text" sid="331854260145314" type="PontosBandeira">
+                    <param id="0" name="Text">&quot;Pontos: &quot;&amp;scorebandeira</param>
+                </action>
+                <action id="-16" name="Wait" sid="222795883149467" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="-3" name="Set position" sid="117270069462010" type="CameraBox">
+                    <param id="0" name="X">CameraBox.X + 720</param>
+                    <param id="1" name="Y">CameraBox.Y + 1280</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="776757763761776">
+            <conditions>
+                <condition id="3" name="On touched object" sid="939073132177650" type="Touch">
+                    <param id="0" name="Object">Jamaica</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="367385617946462" type="Audio">
+                    <param id="0" name="Audio file">vgmenuhighlight</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">100</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-10" name="Add to" sid="745758957793745" type="System">
+                    <param id="0" name="Variable">scorebandeira</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Set text" sid="921464407978865" type="PontosBandeira">
+                    <param id="0" name="Text">&quot;Pontos: &quot;&amp;scorebandeira</param>
+                </action>
+                <action id="-16" name="Wait" sid="129961558585136" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="-3" name="Set position" sid="892010402154628" type="CameraBox">
+                    <param id="0" name="X">CameraBox.X + 720</param>
+                    <param id="1" name="Y">CameraBox.Y + 1280</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="386201034406968">
+            <conditions>
+                <condition id="17" name="On tap object" sid="776539875386457" type="Touch">
+                    <param id="0" name="Object">Angola</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="626161119183837" type="Audio">
+                    <param id="0" name="Audio file">vgmenuhighlight</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">100</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-10" name="Add to" sid="406436974384216" type="System">
+                    <param id="0" name="Variable">scorebandeira</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Set text" sid="340512378641225" type="PontosBandeira">
+                    <param id="0" name="Text">&quot;Pontos: &quot;&amp;scorebandeira</param>
+                </action>
+                <action id="-16" name="Wait" sid="997931183057911" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="-3" name="Set position" sid="807241220653197" type="CameraBox">
+                    <param id="0" name="X">CameraBox.X + 720</param>
+                    <param id="1" name="Y">CameraBox.Y + 1280</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="379721464555442">
+            <conditions>
+                <condition id="17" name="On tap object" sid="373722761865143" type="Touch">
+                    <param id="0" name="Object">Bahia</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="597338123221425" type="Audio">
+                    <param id="0" name="Audio file">vgmenuhighlight</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">100</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-10" name="Add to" sid="106877571977684" type="System">
+                    <param id="0" name="Variable">scorebandeira</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Set text" sid="197339418564539" type="PontosBandeira">
+                    <param id="0" name="Text">&quot;Pontos: &quot;&amp;scorebandeira</param>
+                </action>
+                <action id="-16" name="Wait" sid="850348356540537" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="-3" name="Set position" sid="268652530915958" type="CameraBox">
+                    <param id="0" name="X">CameraBox.X + 720</param>
+                    <param id="1" name="Y">CameraBox.Y + 1280</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="119120135530203">
+            <conditions>
+                <condition id="17" name="On tap object" sid="798068003362213" type="Touch">
+                    <param id="0" name="Object">ceara</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="719570423865725" type="Audio">
+                    <param id="0" name="Audio file">vgmenuhighlight</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">100</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-10" name="Add to" sid="924237300370544" type="System">
+                    <param id="0" name="Variable">scorebandeira</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Set text" sid="786599434436519" type="PontosBandeira">
+                    <param id="0" name="Text">&quot;Pontos: &quot;&amp;scorebandeira</param>
+                </action>
+                <action id="-16" name="Wait" sid="840110520833204" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="-3" name="Set position" sid="945304714247021" type="CameraBox">
+                    <param id="0" name="X">CameraBox.X + 720</param>
+                    <param id="1" name="Y">CameraBox.Y + 1280</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="553106838504683">
+            <conditions>
+                <condition id="17" name="On tap object" sid="491204328019061" type="Touch">
+                    <param id="0" name="Object">RioGrandeDoSul</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="822536257222390" type="Audio">
+                    <param id="0" name="Audio file">vgmenuhighlight</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">100</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-10" name="Add to" sid="494824068157596" type="System">
+                    <param id="0" name="Variable">scorebandeira</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Set text" sid="977530874223448" type="PontosBandeira">
+                    <param id="0" name="Text">&quot;Pontos: &quot;&amp;scorebandeira</param>
+                </action>
+                <action id="-16" name="Wait" sid="861586977865788" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="-3" name="Set position" sid="733497941618750" type="CameraBox">
+                    <param id="0" name="X">CameraBox.X + 720</param>
+                    <param id="1" name="Y">CameraBox.Y + 1280</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="978821660725381">
+            <conditions>
+                <condition id="17" name="On tap object" sid="267767081492211" type="Touch">
+                    <param id="0" name="Object">SantaCatarina</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="144668734520262" type="Audio">
+                    <param id="0" name="Audio file">vgmenuhighlight</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">100</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-10" name="Add to" sid="923577072947574" type="System">
+                    <param id="0" name="Variable">scorebandeira</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Set text" sid="323161496984130" type="PontosBandeira">
+                    <param id="0" name="Text">&quot;Pontos: &quot;&amp;scorebandeira</param>
+                </action>
+                <action id="-16" name="Wait" sid="736138233053200" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="-3" name="Set position" sid="125866644552273" type="CameraBox">
+                    <param id="0" name="X">CameraBox.X + 720</param>
+                    <param id="1" name="Y">CameraBox.Y + 1280</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="125352500866688">
+            <conditions>
+                <condition id="17" name="On tap object" sid="429889061702454" type="Touch">
+                    <param id="0" name="Object">BackPergunta1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="131914826426364" type="Audio">
+                    <param id="0" name="Audio file">error</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">100</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="5" name="Set frame" sid="655075269841294" type="BackPergunta1">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="777169054781284" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="-3" name="Set position" sid="884282225674579" type="CameraBox">
+                    <param id="0" name="X">CameraBox.X + 720</param>
+                    <param id="1" name="Y">CameraBox.Y + 1280</param>
+                </action>
+                <action id="0" name="Play" sid="177854921692074" type="Audio">
+                    <param id="0" name="Audio file">error</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="338645070214181">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="436207071338213" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="249995883739758" type="System">
+                    <param id="0" name="Variable">timerbandeira</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Set text" sid="347835510961085" type="TimerBandeira">
+                    <param id="0" name="Text">&quot;Tempo: &quot;&amp;timerbandeira</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="218441044219331">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="201249147434961" type="System">
+                    <param id="0" name="Variable">timerbandeira</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="170135884801212" type="System">
+                    <param id="0" name="Layout">Parabéns Bandeira</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="904503409680086">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="336592759647619" type="System">
+                    <param id="0" name="Variable">scorebandeira</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">highscore2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="585679117613731" type="System">
+                    <param id="0" name="Variable">highscore2</param>
+                    <param id="1" name="Value">scorebandeira</param>
+                </action>
+                <action id="0" name="Set item" sid="269605357614286" type="LocalStorage">
+                    <param id="0" name="Key">&quot;keyHighscore2&quot;</param>
+                    <param id="1" name="Value">highscore2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="616268909762401">
+            <conditions>
+                <condition id="17" name="On tap object" sid="271701799274651" type="Touch">
+                    <param id="0" name="Object">Fechar</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="390028166092646" type="System">
+                    <param id="0" name="Layout">Menu Layout</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2uistate>
+    <!--This is a UI state file - its content describes the user interface settings when the project was last open.
+It is entirely optional and the project will load without it.  If you are placing the project under source control,
+you probably do not want to add any .uistate.xml files to the repository.-->
+    <configurations>
+        <active>
+            <configuration name="HTML5" />
+        </active>
+        <display name="HTML5" />
+    </configurations>
+    <open-tabs>
+        <layout order="0">Menu Layout</layout>
+        <layout order="2">Opções Layout</layout>
+        <event-sheet active="1" order="1">Menu Event</event-sheet>
+        <event-sheet order="3">Game Bandeira Event</event-sheet>
+    </open-tabs>
+    <properties>
+        <property expanded="1" name="About" />
+        <property expanded="1" name="Project settings" />
+        <property expanded="0" name="Window Size" />
+        <property expanded="1" name="Configuration Settings" />
+    </properties>
+    <families-expanded root="1" />
+    <folders-expanded>
+        <folder expanded="1" path="object-folder/" />
+        <folder expanded="1" path="layout-folder/" />
+        <folder expanded="1" path="event-folder/" />
+        <folder expanded="1" path="file-folder/" />
+        <folder expanded="1" path="sound-folder/" />
+        <folder expanded="1" path="music-folder/" />
+        <folder expanded="0" path="file-folder/Icons/" />
+        <folder expanded="1" path="animation-folder/NomeMundico/" />
+        <folder expanded="1" path="animation-folder/mundigo1/" />
+        <folder expanded="1" path="animation-folder/quiz/" />
+        <folder expanded="1" path="animation-folder/bandeiras/" />
+        <folder expanded="1" path="animation-folder/arrastesolte/" />
+        <folder expanded="1" path="animation-folder/Sprite6/" />
+        <folder expanded="1" path="animation-folder/BackPergunta1/" />
+        <folder expanded="1" path="animation-folder/Sprite2/" />
+        <folder expanded="1" path="animation-folder/Sprite3/" />
+        <folder expanded="1" path="animation-folder/Seta/" />
+        <folder expanded="1" path="animation-folder/volteAoMenu/" />
+        <folder expanded="1" path="animation-folder/Sprite/" />
+        <folder expanded="1" path="animation-folder/Sprite4/" />
+        <folder expanded="1" path="animation-folder/Sprite5/" />
+        <folder expanded="1" path="animation-folder/Sprite7/" />
+        <folder expanded="1" path="animation-folder/Sprite8/" />
+        <folder expanded="1" path="animation-folder/BackPergunta2/" />
+        <folder expanded="1" path="animation-folder/CameraBox/" />
+        <folder expanded="1" path="animation-folder/Sprite9/" />
+        <folder expanded="1" path="animation-folder/Sprite10/" />
+        <folder expanded="1" path="animation-folder/Sprite11/" />
+        <folder expanded="1" path="animation-folder/Sprite12/" />
+        <folder expanded="1" path="animation-folder/Sprite13/" />
+        <folder expanded="1" path="animation-folder/Sprite14/" />
+        <folder expanded="1" path="animation-folder/Sprite15/" />
+        <folder expanded="1" path="animation-folder/Sprite16/" />
+        <folder expanded="1" path="animation-folder/Fechar/" />
+        <folder expanded="1" path="animation-folder/Sprite17/" />
+        <folder expanded="1" path="animation-folder/MapaVazio/" />
+        <folder expanded="1" path="animation-folder/Sprite19/" />
+        <folder expanded="1" path="animation-folder/Sprite18/" />
+        <folder expanded="1" path="animation-folder/Acre/" />
+        <folder expanded="1" path="animation-folder/Alagoas/" />
+        <folder expanded="1" path="animation-folder/Amapá/" />
+        <folder expanded="1" path="animation-folder/AM/" />
+        <folder expanded="1" path="animation-folder/BahiaFoto/" />
+        <folder expanded="1" path="animation-folder/Ceará/" />
+        <folder expanded="1" path="animation-folder/DistritoFederal/" />
+        <folder expanded="1" path="animation-folder/EspiritoSanto/" />
+        <folder expanded="1" path="animation-folder/Goias/" />
+        <folder expanded="1" path="animation-folder/Marahão/" />
+        <folder expanded="1" path="animation-folder/Sprite20/" />
+        <folder expanded="1" path="animation-folder/MGDoSul/" />
+        <folder expanded="1" path="animation-folder/MatoGrosso/" />
+        <folder expanded="1" path="animation-folder/MinasGerais/" />
+        <folder expanded="1" path="animation-folder/Pará/" />
+        <folder expanded="1" path="animation-folder/paraiba/" />
+        <folder expanded="1" path="animation-folder/Parana/" />
+        <folder expanded="1" path="animation-folder/Pernambuco/" />
+        <folder expanded="1" path="animation-folder/Piaui/" />
+        <folder expanded="1" path="animation-folder/RJ/" />
+        <folder expanded="1" path="animation-folder/RioGrandedoNorte/" />
+        <folder expanded="1" path="animation-folder/RioGrandeSul/" />
+        <folder expanded="1" path="animation-folder/Rondonia/" />
+        <folder expanded="1" path="animation-folder/Sprite21/" />
+        <folder expanded="1" path="animation-folder/Roraima/" />
+        <folder expanded="1" path="animation-folder/SantaCtarina/" />
+        <folder expanded="1" path="animation-folder/SP/" />
+        <folder expanded="1" path="animation-folder/Sergipe/" />
+        <folder expanded="1" path="animation-folder/Tocantins/" />
+        <folder expanded="1" path="animation-folder/Sprite22/" />
+        <folder expanded="1" path="animation-folder/SPACRE/" />
+        <folder expanded="1" path="animation-folder/SPALAGOAS/" />
+        <folder expanded="1" path="animation-folder/SPAMAPA/" />
+        <folder expanded="1" path="animation-folder/SPAMAZONAS/" />
+        <folder expanded="1" path="animation-folder/SPBAHIA/" />
+        <folder expanded="1" path="animation-folder/SPCEARA/" />
+        <folder expanded="1" path="animation-folder/SPDISTRITO/" />
+        <folder expanded="1" path="animation-folder/SPESPIRITO/" />
+        <folder expanded="1" path="animation-folder/SPGOIAS/" />
+        <folder expanded="1" path="animation-folder/SPMARANHÃO/" />
+        <folder expanded="1" path="animation-folder/SPMATOSUL/" />
+        <folder expanded="1" path="animation-folder/SPMATOGROSSO/" />
+        <folder expanded="1" path="animation-folder/SPMINAS/" />
+        <folder expanded="1" path="animation-folder/SPPARA/" />
+        <folder expanded="1" path="animation-folder/SPPARAIBA/" />
+        <folder expanded="1" path="animation-folder/SPPARANÁ/" />
+        <folder expanded="1" path="animation-folder/SPPERNAMBUCO/" />
+        <folder expanded="1" path="animation-folder/SPRIONORTE/" />
+        <folder expanded="1" path="animation-folder/SPPIAUI/" />
+        <folder expanded="1" path="animation-folder/SPRIOSUL/" />
+        <folder expanded="1" path="animation-folder/SPRONDONIA/" />
+        <folder expanded="1" path="animation-folder/SPRORAIMA/" />
+        <folder expanded="1" path="animation-folder/SPSANTACATARINA/" />
+        <folder expanded="1" path="animation-folder/SPSAOPAULO/" />
+        <folder expanded="1" path="animation-folder/SPSERGIPE/" />
+        <folder expanded="1" path="animation-folder/SPTOCANTINS/" />
+        <folder expanded="1" path="animation-folder/Confirmar/" />
+        <folder expanded="1" path="animation-folder/SPRIODEJNAEIRO/" />
+        <folder expanded="1" path="animation-folder/Sprite23/" />
+        <folder expanded="1" path="animation-folder/Sprite24/" />
+        <folder expanded="1" path="animation-folder/FecharMapa/" />
+        <folder expanded="1" path="animation-folder/OpçõesBtn/" />
+        <folder expanded="1" path="animation-folder/Sprite25/" />
+        <folder expanded="1" path="animation-folder/Sprite26/" />
+        <folder expanded="1" path="animation-folder/btnsairopções/" />
+        <folder expanded="1" path="animation-folder/Sprite27/" />
+        <folder expanded="1" path="animation-folder/Ativaraudio/" />
+        <folder expanded="1" path="animation-folder/Sprite28/" />
+        <folder expanded="1" path="animation-folder/Desativaraudio/" />
+    </folders-expanded>
+</c2uistate>

@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Game Quiz Event</name>
+    <events>
+        <variable constant="0" name="timer" sid="410983072280645" static="0" type="number">60</variable>
+        <variable constant="0" name="score" sid="261383799486777" static="0" type="number">0</variable>
+        <variable constant="0" name="random_number" sid="943845981156904" static="0" type="number">0</variable>
+        <variable constant="0" name="current_answer" sid="275166593670434" static="0" type="text">&quot;&quot;</variable>
+        <event-block sid="567007437286553">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="329810107616754" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="570543219433834" type="Function">
+                    <param id="0" name="Name">&quot;getRandomQuestion&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="-9" name="Set value" sid="237034305399692" type="System">
+                    <param id="0" name="Variable">score</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="145619350852182" type="System">
+                    <param id="0" name="Variable">timer</param>
+                    <param id="1" name="Value">60</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="935892988896574">
+            <conditions>
+                <condition id="0" name="On function" sid="842029400011548" type="Function">
+                    <param id="0" name="Name">&quot;getRandomQuestion&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="703594474530926" type="System">
+                    <param id="0" name="Variable">random_number</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="778646582492324" type="System">
+                    <param id="0" name="Variable">random_number</param>
+                    <param id="1" name="Value">floor(random(TOTAL_QUESTIONS))</param>
+                </action>
+                <action id="0" name="Set text" sid="567185727516401" type="Pergunta">
+                    <param id="0" name="Text">trim(tokenat(Array.At(random_number),0,&quot;;&quot;))</param>
+                </action>
+                <action id="0" name="Set text" sid="531452784292074" type="Resposta1">
+                    <param id="0" name="Text">trim(tokenat(Array.At(random_number),1,&quot;;&quot;))</param>
+                </action>
+                <action id="0" name="Set text" sid="144117889042301" type="Resposta2">
+                    <param id="0" name="Text">trim(tokenat(Array.At(random_number),2,&quot;;&quot;))</param>
+                </action>
+                <action id="0" name="Set text" sid="584799491133801" type="Resposta3">
+                    <param id="0" name="Text">trim(tokenat(Array.At(random_number),3,&quot;;&quot;))</param>
+                </action>
+                <action id="0" name="Set text" sid="896936555109881" type="Resposta4">
+                    <param id="0" name="Text">trim(tokenat(Array.At(random_number),4,&quot;;&quot;))</param>
+                </action>
+                <action id="-9" name="Set value" sid="978200716708335" type="System">
+                    <param id="0" name="Variable">current_answer</param>
+                    <param id="1" name="Value">trim(tokenat(Array.At(random_number),5,&quot;;&quot;))</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="601319133887099">
+            <conditions>
+                <condition id="0" name="On function" sid="870742094383265" type="Function">
+                    <param id="0" name="Name">&quot;checkAnswer&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="555025125349780">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="503170592586539" type="System">
+                            <param id="0" name="Variable">current_answer</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">Function.Param(0)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="540010818551122" type="Audio">
+                            <param id="0" name="Audio file">vgmenuhighlight</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">100</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="665373061458500" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="924723053627305" type="Score">
+                            <param id="0" name="Text">&quot;Pontos: &quot;&amp;score</param>
+                        </action>
+                        <action id="0" name="Call function" sid="922254317601961" type="Function">
+                            <param id="0" name="Name">&quot;getRandomQuestion&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="441687076322799">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="185520369037414" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="720527244246162" type="Audio">
+                            <param id="0" name="Audio file">error</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">100</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="721846457003196" type="BackPergunta1">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="185598209272114" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="0" name="Call function" sid="673586852045367" type="Function">
+                            <param id="0" name="Name">&quot;getRandomQuestion&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="5" name="Set frame" sid="995317655811245" type="BackPergunta1">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="327707221414980">
+            <conditions>
+                <condition id="3" name="On touched object" sid="662721581437442" type="Touch">
+                    <param id="0" name="Object">Resposta1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="282373476353022" type="Audio">
+                    <param id="0" name="Audio file">Menu Selection Click</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">5</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="603042374593894" type="Function">
+                    <param id="0" name="Name">&quot;checkAnswer&quot;</param>
+                    <param id="1" name="Parameter {n}">Resposta1.Text</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="192215912863757">
+            <conditions>
+                <condition id="3" name="On touched object" sid="206049242541829" type="Touch">
+                    <param id="0" name="Object">Resposta2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="179694439604047" type="Function">
+                    <param id="0" name="Name">&quot;checkAnswer&quot;</param>
+                    <param id="1" name="Parameter {n}">Resposta2.Text</param>
+                </action>
+                <action id="0" name="Play" sid="416387955268340" type="Audio">
+                    <param id="0" name="Audio file">Menu Selection Click</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">5</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="578685203072312">
+            <conditions>
+                <condition id="3" name="On touched object" sid="784373684399906" type="Touch">
+                    <param id="0" name="Object">Resposta3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="240015675940338" type="Function">
+                    <param id="0" name="Name">&quot;checkAnswer&quot;</param>
+                    <param id="1" name="Parameter {n}">Resposta3.Text</param>
+                </action>
+                <action id="0" name="Play" sid="692302304726711" type="Audio">
+                    <param id="0" name="Audio file">Menu Selection Click</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">5</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="930469926530818">
+            <conditions>
+                <condition id="3" name="On touched object" sid="118337823340797" type="Touch">
+                    <param id="0" name="Object">Resposta4</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="781817606001776" type="Function">
+                    <param id="0" name="Name">&quot;checkAnswer&quot;</param>
+                    <param id="1" name="Parameter {n}">Resposta4.Text</param>
+                </action>
+                <action id="0" name="Play" sid="386068380828323" type="Audio">
+                    <param id="0" name="Audio file">Menu Selection Click</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">5</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="166556813845070">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="848110567689066" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="132407734106130" type="System">
+                    <param id="0" name="Variable">timer</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Set text" sid="501978874355140" type="Tempo">
+                    <param id="0" name="Text">&quot;Tempo: &quot;&amp;timer</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="595146501860566">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="705540564581471" type="System">
+                    <param id="0" name="Variable">timer</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="132125177731093" type="System">
+                    <param id="0" name="Layout">Parabens Layout</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="153094492943548">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="871035400284126" type="System">
+                    <param id="0" name="Variable">score</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">highscore</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="300878093263513" type="System">
+                    <param id="0" name="Variable">highscore</param>
+                    <param id="1" name="Value">score</param>
+                </action>
+                <action id="0" name="Set item" sid="405447372016616" type="LocalStorage">
+                    <param id="0" name="Key">&quot;keyHighscore&quot;</param>
+                    <param id="1" name="Value">highscore</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="393302338201608">
+            <conditions>
+                <condition id="17" name="On tap object" sid="844787249637069" type="Touch">
+                    <param id="0" name="Object">Fechar</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="595682476031446" type="System">
+                    <param id="0" name="Layout">Menu Layout</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
